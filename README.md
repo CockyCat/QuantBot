@@ -15,7 +15,7 @@
 
 直接运行build.sh进行编译，需要用到xgo和Docker，可以同时编译出多个平台下的可执行文件，如果不需要多平台支持，可以直接用go编译，推荐使用LiteIDE。
 
-## 包依赖问题
+## 包依赖问题【废弃】
 
 通过使用[glide](https://github.com/Masterminds/glide)工具可以解决包的依赖。安装glide后执行下列命令。
 
@@ -23,6 +23,13 @@
 $ cd QuantBot
 $ glide install
 ```
+## 包依赖问题直接采用go mod的方式
+```shell
+$ go mod init QuantBot
+$ go mod vendor
+```
+然后进行go build编译
+
 
 ## 支持的交易所
 
